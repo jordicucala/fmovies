@@ -10,5 +10,11 @@
 
   <body>
     <%= render partial: 'layouts/navbar' %>
+    <div class="container">
+      <h1>Latest movies</h1>
+      <div class="row">
+        <%= render partial: 'movies/movie', collection: @movies, as: :movie %>
+      </div>
+    </div>
   </body>
 </html>

@@ -10,7 +10,6 @@ end
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -37,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
+gem 'unirest'
+gem 'baby_squeel'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,6 +45,13 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'mysql2'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :development do
