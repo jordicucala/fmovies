@@ -26,5 +26,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  host: ec2-54-75-230-240.eu-west-1.compute.amazonaws.com
+  database: d4ee5vcg1pqbh7
+  username: uldaruoxpoupzm
+  port: 5432
+  password: <%= ENV['FMOVIES_DATABASE_PASSWORD'] %>
+
