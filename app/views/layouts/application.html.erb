@@ -3,18 +3,14 @@
   <head>
     <title>Fmovies</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render partial: 'layouts/navbar' %>
+    <%= render partial: 'layouts/navbar' , :formats => [:html] %>
     <div class="container">
-      <h1>Latest movies</h1>
-      <div class="row">
-        <%= render partial: 'movies/movie', collection: @movies, as: :movie %>
-      </div>
+      <%= yield %>
     </div>
   </body>
 </html>

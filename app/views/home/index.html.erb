@@ -1,0 +1,4 @@
+<h1>Latest movies</h1>
+<div class="row">
+  <%= render partial: 'movies/movie', collection: @movies, as: :movie , :formats => [:html] %>
+</div>
