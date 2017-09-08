@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <%= link_to 'Home', root_path , class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -21,6 +21,7 @@
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
+      <%= link_to 'Sign in', sign_in_path %> or <%= link_to 'Sign up', sign_up_path %>
     </div>
   </div>
 </nav>

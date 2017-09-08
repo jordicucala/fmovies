@@ -1,0 +1,5 @@
+<h1>Movies</h1>
+<div class="row">
+  <%= render partial: 'movies/movie', collection: @movies, as: :movie %>
+</div>
+<%= will_paginate @movies %>
