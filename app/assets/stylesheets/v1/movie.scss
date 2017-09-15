@@ -1,0 +1,36 @@
+@import "variables";
+
+.movie {
+  a {
+    color: inherit;
+  }
+}
+.movie_box {
+  background: #fff;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.movie_title {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.movie_overview {
+  font-size: 12px;
+}
+
+.movie_release_date {
+  font-size: 12px;
+}
+
+.movie_footer_data {
+  background: $primary-color;
+  color: #fff;
+  float: left;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}

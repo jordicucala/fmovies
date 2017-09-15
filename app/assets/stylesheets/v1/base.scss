@@ -1,12 +1,32 @@
+@import "variables";
+
 body {
   background-color: #f4f4f4;
 }
 
-.movie_box {
-  background: #fff;
-  margin: 10px;
-}
-
 .wt_pad {
   padding: 0;
+}
+
+.footer {
+  background: #081c24;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.mg_15{margin: 15px}
+.mg_20{margin: 20px}
+.mg_25{margin: 25px}
+
+.pagination {
+  .next {
+    
+  }
+  .current {
+    background: $primary-color;
+    color: #fff
+  }
+  a, em, span {
+    padding: 10px;
+  }
 }

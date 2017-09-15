@@ -4,13 +4,17 @@
     <title>Fmovies</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render partial: 'layouts/navbar' , :formats => [:html] %>
+    <%= render partial: 'layouts/navbar', :formats => [:html] %>
+
     <div class="container">
       <%= yield %>
     </div>
+
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>
