@@ -1,9 +1,11 @@
 class MainController < ApplicationController
 
   def search
-    debugger
+
     #@movies = Movie.ransack(title: params[:q]).result(distinct: true)
-    @movies = Movie.c {title == params[:q] }.result(distinct: true)
+    #@movies = Movie.where.has { title == params[:q] }.result(distinct: true)
+    @movies = Movie.where(title: params[:q])
+
 
     respond_to do |format|
       format.html {}
