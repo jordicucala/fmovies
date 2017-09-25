@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     get 'sign_up', to: 'devise/registrations#new'
   end
   localized do
-    resources :movies
+    resources :movies do
+      get :now_playing, :on => :collection
+    end
   end
 end

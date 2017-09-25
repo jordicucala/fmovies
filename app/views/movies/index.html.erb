@@ -1,4 +1,12 @@
 <h1>Movies</h1>
+<nav class="nav nav-pills flex-column flex-sm-row nav_movies">
+  <a class="flex-sm-fill text-sm-center nav-link selected" href="#">Latest movies</a>
+  <a class="flex-sm-fill text-sm-center nav-link" >Now playing</a>
+  <%= link_to 'Now playing', now_playing_movies_path() %>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Popular movies</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Top Rated</a>
+</nav>
+
 <div class="row">
   <%= render partial: 'movies/movie_preview', collection: @movies, as: :movie %>
 </div>

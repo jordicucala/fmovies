@@ -1,13 +1,26 @@
 <% @movie = movie %>
-<div class="col-sm-6">
-  <div class="row wt_pad movie_box">
-    <div class="col-sm-4 wt_pad">
-      <img src='<%= "http://image.tmdb.org/t/p/w185/#{@movie.poster_path}"%>'>
+<div class="col-sm-12">
+  <div class="row wt_pad movie_box text-center">
+    <div class="col-sm-12 wt_pad">
+      <img src='<%= "http://image.tmdb.org/t/p/w1280#{@movie.backdrop_path}"%>' class="backdrop_img">
     </div>
-    <div class="col-sm-6 mg_15">
-      <p class="movie_title"><%= @movie.title %></p>
+    <div class="col-sm-12 mg_15">
+      <h1 class="movie_title"><%= @movie.title %></h1>
       <p class="movie_release_date"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= @movie.release_date.year %></p>
       <p class="movie_overview"><%= @movie.overview %></p>
+    </div>
+    <div class="col-sm-3 bg_default"></div>
+    <div class="col-sm-9">
+      <h2>Cast</h2>
+      <div class="row owl-carousel owl-theme cast_carousel">
+      <% @casts.each do |cast| %>
+        <div>
+          <img src='<%= "http://image.tmdb.org/t/p/w185/#{cast.profile_path}"%>'>
+          <div class="cast_text"><%= cast.character %></div>
+          <div class="cast_text"><%= cast.name %></div>
+        </div>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

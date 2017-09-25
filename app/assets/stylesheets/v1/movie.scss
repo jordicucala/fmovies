@@ -9,6 +9,9 @@
   background: #fff;
   margin: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  a {
+    text-decoration: none !important;
+  }
 }
 
 
@@ -33,4 +36,35 @@
   padding: 5px;
   font-size: 12px;
   font-weight: bold;
+}
+
+.nav_movies {
+
+  .nav-link {
+    border-radius: 0;
+    margin: 5px;
+
+    &.selected {
+      border-bottom: 2px solid $primary-color;;
+    }
+    &:hover {
+      border-bottom: 2px solid $primary-color;;
+    }
+  }
+}
+
+.backdrop_img {
+  width: inherit;
+}
+
+.cast_carousel {
+  img {
+    width: 150px !important;
+    height: 210px;
+  }
+  .cast_text {
+    float: left;
+    font-size: 12px;
+    width: 100%;
+  }
 }

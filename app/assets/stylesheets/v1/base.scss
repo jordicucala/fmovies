@@ -4,6 +4,10 @@ body {
   background-color: #f4f4f4;
 }
 
+.bg_default {
+  background-color: $primary-color;
+}
+
 .wt_pad {
   padding: 0;
 }
