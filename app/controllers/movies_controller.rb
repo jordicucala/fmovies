@@ -11,6 +11,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
-    @casts = Cast.search_cast_movie(params[:id])
+    MovieTool.videos(@movie.movie_id)
+    @casts = Cast.search_cast_movie(@movie.movie_id)
   end
 end
