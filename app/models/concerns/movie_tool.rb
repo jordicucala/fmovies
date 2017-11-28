@@ -43,6 +43,11 @@ module MovieTool
       movie.save
     end
   end
+
+  def self.videos(movie_id)
+    debugger
+    videos = Unirest.get "https://api.themoviedb.org/3/movie/#{movie_id}/videos?api_key=2608d6a6f0be2798af1efddc7009cc8a"
+  end
   
   def self.find_movie
     find_movie = 'https://api.themoviedb.org/3/movie/211672?api_key=2608d6a6f0be2798af1efddc7009cc8a'

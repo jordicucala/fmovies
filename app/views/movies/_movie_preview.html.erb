@@ -1,17 +1,18 @@
-<div class="col-sm-6 movie">
+<div class="col-sm-12 col-lg-4 movie">
   <%= link_to movie_path(movie) do %>
   <div class="row wt_pad movie_box">
-    <div class="col-sm-4 wt_pad">
-      <img src='<%= "http://image.tmdb.org/t/p/w185/#{movie.poster_path}"%>'>
-    </div>
-    <div class="col-sm-6 mg_15">
-      <p class="movie_title"><%= movie.title %></p>
-      <p class="movie_release_date"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= movie.release_date.year %></p>
-      <p class="movie_overview"><%= movie.overview %></p>
-      <div class="movie_footer_data">
-        <%= movie.original_language %>
+    <div class="col-sm-12 wt_pad ">
+      <img class="movie_img" src='<%= "http://image.tmdb.org/t/p/w1280/#{movie.backdrop_path}"%>'>
+      <img class="movie_img_poster" src='<%= "http://image.tmdb.org/t/p/w185/#{movie.poster_path}"%>'>
+      <div class="col-sm-12 movie_basic_inf">
+        <h1 class="movie_title"><%= movie.title %></h1>
+        <p class="movie_release_date"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= movie.release_date.year %></p>
+        <p class="movie_overview"><%# movie.overview %></p>
+        <div class="movie_footer_data">
+          <%= movie.original_language %>
+        </div>
       </div>
-    </div>
+      </div>
   </div>
   <% end %>
 </div>

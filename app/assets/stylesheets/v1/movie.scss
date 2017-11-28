@@ -3,6 +3,9 @@
 .movie {
   a {
     color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 .movie_box {
@@ -14,10 +17,30 @@
   }
 }
 
+.movie_basic_inf {
+  position: absolute;
+  bottom: 0;
+  background: $primary-color;
+  color: #fff;
+}
+
+.movie_img {
+  width: 100%;
+}
+
+.movie_img_poster {
+  position: absolute;
+  z-index: 9;
+  right: 10px;
+  bottom: 0;
+  width: 100px;
+}
+
 
 .movie_title {
   font-weight: bold;
   margin-bottom: 0;
+  font-size: 24px;
 }
 
 .movie_overview {
@@ -55,6 +78,11 @@
 
 .backdrop_img {
   width: inherit;
+}
+
+.movie_main_details {
+  background: $primary-color;
+  color: #fff;
 }
 
 .cast_carousel {

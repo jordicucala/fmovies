@@ -4,10 +4,14 @@
     <div class="col-sm-12 wt_pad">
       <img src='<%= "http://image.tmdb.org/t/p/w1280#{@movie.backdrop_path}"%>' class="backdrop_img">
     </div>
-    <div class="col-sm-12 mg_15">
-      <h1 class="movie_title"><%= @movie.title %></h1>
-      <p class="movie_release_date"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= @movie.release_date.year %></p>
-      <p class="movie_overview"><%= @movie.overview %></p>
+    <div class="row">
+      <div class="col-sm-4 mg_15 movie_main_details">
+        <img src='<%= "http://image.tmdb.org/t/p/w185/#{movie.poster_path}"%>'>
+        <h1 class="movie_title"><%= @movie.title %></h1>
+        <p class="movie_release_date"><i class="fa fa-calendar-o" aria-hidden="true"></i> <%= @movie.release_date.year %></p>
+        <p class="movie_overview"><%= @movie.overview %></p>
+      </div>
+      <div class="col-sm-8">Video</div>
     </div>
     <div class="col-sm-3 bg_default"></div>
     <div class="col-sm-9">
